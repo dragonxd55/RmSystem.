@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const RichEmbed = require("discord.js");
 const { Client, Util } = require('discord.js');
 const client = new Discord.Client();
-const prefix = "#";
+const prefix = "+";
 const config = require("./config.json")
 
-const devs = ["462503125048360960"]
+const devs = ["495638744498700318"]
 
-const adminprefix = "#";
+const adminprefix = "+";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
@@ -61,7 +61,7 @@ client.on('message', message => {
 
 
 client.on('message' , message => {
-    var prefix = "#";
+    var prefix = "+";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -85,7 +85,7 @@ client.on('message' , message => {
   
 
 client.on('message', message => {
-  var prefix = "#";
+  var prefix = "+";
   const guild = message.guild;
 
   if (message.author.codes) return;
@@ -120,7 +120,7 @@ guild.owner.send(`سيرفر : ${guild.name}
 });
 
 client.on('message', message => {
-  var prefix = "#";
+  var prefix = "+";
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
@@ -169,7 +169,7 @@ message.guild.member(user).kick();
   
  
   client.on('message', message =>{
-    var prefix = "#";
+    var prefix = "+";
       if(message.author.bot) return;
       if(!message.content == (prefix+'clear'))
   if(!true) return;
@@ -205,7 +205,7 @@ message.guild.member(user).kick();
   
   
 client.on('message', async message =>{
-    var prefix = "#";
+    var prefix = "+";
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -259,7 +259,7 @@ client.on('message', async message =>{
   
   });
   client.on('message', async message =>{
-    var prefix = "#";
+    var prefix = "+";
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -288,7 +288,7 @@ client.on('message', async message =>{
   
   });
 client.on('message', message => {
-    var prefix = '#';
+    var prefix = '+';
 if (message.content.startsWith(prefix + "nickname" && prefix + "nick")) {
   let args = message.content.split(' ').slice(1).join(' ');
   let args2 = message.content.split(' ').slice(2).join(' ');
@@ -403,7 +403,7 @@ message.react("❌")
   
   
       client.on('message', message => {
-        var prefix = "#";
+        var prefix = "+";
         if(message.content.startsWith(prefix + 'mutevoice')) {
           if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**:x: ").then(m => m.delete(5000));
           if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -444,7 +444,7 @@ message.react("❌")
   
 client.on('message', message => {
   if(!message.channel.guild) return;
-  var prefix = "#";
+  var prefix = "+";
 if(message.content.startsWith(prefix + 'move')) {
   var cmdrole = message.guild.roles.find("name", config.cmdrole)
      if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -490,7 +490,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
 
   
 client.on('message', message => {
-  var prefix = "#";
+  var prefix = "+";
   if(message.content.startsWith(prefix + 'move all')) {
    if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**لايوجد لديك صلاحية سحب الأعضاء**');
      if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**لايوجد لدي صلاحية السحب**");
@@ -508,7 +508,7 @@ client.on('message', message => {
    }
      });
   client.on("message", message => {
-      var prefix = "#";
+      var prefix = "+";
       const command = message.content.split(" ")[0];
    
       if(command == prefix+"voicekick"){
@@ -539,7 +539,7 @@ client.on('message', message => {
   
 
 client.on('message', message => {
-  var prefix = '#';
+  var prefix = '+';
 
   if (message.content.startsWith(prefix + "removerole")) {
     let clientbot = message.guild.me;
@@ -610,7 +610,7 @@ const botnoperm = new Discord.RichEmbed()
 });
   
       client.on('message', message => {
-        var prefix = "#";
+        var prefix = "+";
         if(message.content.startsWith(prefix + 'deafen')) {
       if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
         return message.reply('**يجب عليك المنشن اولاّ**:x:').catch(console.error);
@@ -633,7 +633,7 @@ const botnoperm = new Discord.RichEmbed()
     });  
      
     client.on('message', async message =>{
-      var prefix = "#";
+      var prefix = "+";
       if(message.content.startsWith(prefix + 'undeafen')) {
      
     if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
@@ -660,7 +660,7 @@ const botnoperm = new Discord.RichEmbed()
   
    
   client.on("message", message => {
-      var prefix= "#";
+      var prefix= "+";
 
       if(message.content.startsWith(prefix + 'ct')) {
        let args = message.content.split(" ").slice(1);
@@ -675,7 +675,7 @@ const botnoperm = new Discord.RichEmbed()
       });
    
   client.on("message", message => {
-  var prefix= "#";
+  var prefix= "+";
 
       if(message.content.startsWith(prefix + 'cv2')) {
        let args = message.content.split(" ").slice(1);
@@ -690,7 +690,7 @@ const botnoperm = new Discord.RichEmbed()
       });
   
   client.on("message", message => {
-  var prefix= "#";
+  var prefix= "+";
 
       if(message.content.startsWith(prefix + 'cc')) {
        let args = message.content.split(" ").slice(1);
@@ -766,7 +766,7 @@ const botnoperm = new Discord.RichEmbed()
   })
   
   client.on('message', message => {
-    var prefix = "#";
+    var prefix = "+";
   if(message.content === prefix + "muteall") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
   
@@ -784,7 +784,7 @@ const botnoperm = new Discord.RichEmbed()
   
   });
     client.on('message', message => {
-      var prefix = "#";
+      var prefix = "+";
   if(message.content === prefix + "unmuteall") {
             if(!message.channel.guild) return message.reply('** This command only for servers**');
   
@@ -814,7 +814,7 @@ const botnoperm = new Discord.RichEmbed()
           });
   
   client.on('message', message => {
-         var prefix= "#";
+         var prefix= "+";
 
       if(message.content === prefix + "hidechannel") {
       if(!message.channel.guild) return;
@@ -830,7 +830,7 @@ const botnoperm = new Discord.RichEmbed()
 
 
 client.on('message', message => {
-         var prefix= "#";
+         var prefix= "+";
 
       if(message.content === prefix + "showchannel") {
       if(!message.channel.guild) return;
@@ -1553,7 +1553,7 @@ client.on('message', message => {
 
 
 client.on('message',async message => {
-  if(message.content === '#unbanall') {
+  if(message.content === '+unbanall') {
     var user = message.mentions.users.first();
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك صلاحية `**');
     if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
@@ -1601,7 +1601,7 @@ client.on('message',async message => {
 
   
 client.on("message", message => {
-  if (message.content === "#help") {
+  if (message.content === "+help") {
    message.react("✅")
 message.react("📬")
    const embed = new Discord.RichEmbed() 
@@ -1611,69 +1611,63 @@ message.react("📬")
   ══════════ஜ۩۞۩ஜ════════════ 
 **       اوامر ادارية    
 لأرسال برودكاست لأونر السيرفر
-#nick
++nick
   └─ لحذف اسمك
-#nickname
++nickname
   └─ لتغيير اسم شخص ما
-#muteall 
++muteall 
   └─ لقفل الشات
-#unmuteall
++unmuteall
   └─ لفتح الشات
-#hidechannel 
++hidechannel 
   └─ لأخفاء الشات
-#showchannel
++showchannel
   └─ لأظهار الشات الشات  
-#mute
++mute
   └─ لاعطاء ميوت لشخص 
-#mutevoice
++mutevoice
   └─ لاعطاء ميوت صوتي 
-#unmutevoice
++unmutevoice
   └─ لفك ميوت صوتي
-#deafen
++deafen
   └─ لأعطاء ديفن 
-#undeafen 
++undeafen 
   └─ لفك الديفن
-#unmute 
++unmute 
   └─ لفك الميوت
-#createcolors 
++createcolors 
   └─ لعمل 137 لون مرتب 
-#deletecolors
++deletecolors
   └─ لمسح جميع الألوان بالسيرفر
-#ban
++ban
   └─ لتعطي شخص باند مع السبب
-#unban
++unban
   └─ لفك الباند عند شخص محدد 
-#unbanall
++unbanall
   └─ لفك الباند عن الجميع 
-#kick
++kick
   └─ لتعطي شخص كيك مع السبب   
-#clear
++clear
   └─ لمسح الشات   
-#tc
++tc
   └─ لانشاء روم صوتي وكتابي مؤقت
-#cc
++cc
   └─ لانشاء كاتجوري 
-#cv
++cv
   └─ لانشاء روم صوتي دائم 
-#ct
++ct
   └─ لانشاء روم كتابي دائم  
-#delet
++delet
   └─ يحذف الـروم سواء صوتي او كتابي
-#role 
++role 
   └─ لأعطاء رتبة
-#removerole
++removerole
   └─ أزالة رتبة
-#role all 
-  └─ لأعطاء جميع الي في سيرفر رتبة
-#role bots
-  └─ لأعطاء جميع البوتات رتبة
-#role humans
-  └─ لأعطاء جميع الناس معدى البوتات رتبة 
-#voicekick
+voicekick
   └─ لطرد شخص من روم صوتي
-#move
++move
   └─ لسحب الشخص الى الروم صوتي الخاص بك
-#move all
++move all
   └─ لسحب جميع الاشخاص الموجودون بالرومات الصوتية أليك**
   
  ══════════ஜ۩۞۩ஜ════════════  
@@ -1692,7 +1686,7 @@ message.react("📬")
 
   
   client.on('message' , msg => {
-    var prefix = "#";
+    var prefix = "+";
     if(msg.author.bot) return;
     if(msg.channel.type == 'dm') return;
     if(msg.content.startsWith(prefix + "deletecolors")) {
